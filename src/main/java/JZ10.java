@@ -6,7 +6,9 @@
  **/
 public class JZ10 {
     public static int RectCover(int n) {
-        if (n==0 || n==1 || n==2) return n;
+        if (n==0 || n==1 || n==2){
+            return n;
+        }
         int a = 1, b = 2, c = 0;
         for (int i=3; i<=n; ++i) {
             c = a + b;
