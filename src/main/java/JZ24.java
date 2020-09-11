@@ -24,6 +24,7 @@ public class JZ24 {
         if (root.right != null) {
             recur(root.right, target - root.val);
         }
+        // 说明该条路径不符，移出该节点
         trace.remove((Integer)root.val);
     }
     public ArrayList<ArrayList<Integer>> FindPath(MyBinaryTree.TreeNode root, int target) {
