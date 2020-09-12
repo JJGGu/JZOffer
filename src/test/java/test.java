@@ -13,7 +13,7 @@ import java.util.List;
  *
  **/
 
-public class JZ01 {
+public class test {
     @Test
     public void test1(){
         MyLinkedList myLinkedList = new MyLinkedList();
@@ -30,7 +30,14 @@ public class JZ01 {
     @Test
     public void test2() {
         MyHeap<Integer> heap = new MyHeap<>();
+        heap.add(10);
+        heap.add(13);
         heap.add(1);
-
+        heap.add(4);
+        heap.add(85);
+        for (int i = 0; i < 5; i++) {
+            Integer poll = heap.poll();
+            System.out.println(poll);
+        }
     }
 }
