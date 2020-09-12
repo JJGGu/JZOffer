@@ -1,5 +1,6 @@
 import org.junit.Test;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,5 +26,11 @@ public class JZ01 {
             listNode = listNode.next;
             System.out.println(listNode.val);
         }
+    }
+    @Test
+    public void test2() {
+        MyHeap<Integer> heap = new MyHeap<>();
+        heap.add(1);
+
     }
 }
