@@ -40,4 +40,21 @@ public class test {
             System.out.println(poll);
         }
     }
+
+    @Test
+    public void test3() {
+        int[] a = {4, 4, 2, 6, 8, 1, 3, 6,10};
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i; j < a.length - 1; j++) {
+                if (a[j] < a[j + 1]) {
+                    int temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
+        }
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
+    }
 }
