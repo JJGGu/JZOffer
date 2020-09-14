@@ -57,4 +57,9 @@ public class test {
             System.out.println(a[i]);
         }
     }
+
+    @Test
+    public void test4() {
+        System.out.println((int)'a');
+    }
 }
