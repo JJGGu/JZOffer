@@ -60,6 +60,6 @@ public class test {
 
     @Test
     public void test4() {
-        System.out.println((int)'a');
+        System.out.println('1' - 48);
     }
 }
