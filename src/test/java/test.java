@@ -1,8 +1,11 @@
 import org.junit.Test;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * @program: JZOffer
@@ -60,6 +63,16 @@ public class test {
 
     @Test
     public void test4() {
-        System.out.println('1' - 48);
+        ArrayList<Integer> a = new ArrayList<>();
+        System.out.println(a.size());
+        a.add(1);
+        System.out.println(a.size());
+        HashMap<Integer, Integer> map = new HashMap<>();
+        Arrays.sort(new Integer[] {1,2 ,3}, Comparator.reverseOrder());
+        map.put(null, 2);
+        System.out.println(map.get(null));
+        ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();
+        Thread thread = new Thread();
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
     }
 }
