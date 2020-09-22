@@ -30,8 +30,6 @@ public class JZ01 {
             while (j_start <= j_end){
                 int j_mid = (j_start + j_end) / 2;
                 if (target == array[i][j_mid]){
-//                        System.out.println("i：" + mid_i);
-//                        System.out.println("j: " + j_mid);
                     return true;
                 }
                 if (target < array[i][j_mid]){

@@ -63,16 +63,12 @@ public class test {
 
     @Test
     public void test4() {
-        ArrayList<Integer> a = new ArrayList<>();
-        System.out.println(a.size());
-        a.add(1);
-        System.out.println(a.size());
-        HashMap<Integer, Integer> map = new HashMap<>();
-        Arrays.sort(new Integer[] {1,2 ,3}, Comparator.reverseOrder());
-        map.put(null, 2);
-        System.out.println(map.get(null));
-        ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();
-        Thread thread = new Thread();
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        int[] a = {1, 2, 3, 4, 5,6};
+        int index = 0;
+        while (a[0] != a[index++]) {
+        }
+        System.out.println(index);
     }
+
+
 }
