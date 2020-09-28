@@ -8,7 +8,7 @@ import java.util.*;
  **/
 public class JZ37 {
     public static void main(String[] args) {
-        int i = GetNumberOfK(new int[]{1,2,3,3,3,3}, 3);
+        int i = GetNumberOfK2(new int[]{1,2,3,3,3,3, 4, 5}, 3);
         System.out.println(i);
     }
     public static int GetNumberOfK(int[] array , int k) {
@@ -26,4 +26,34 @@ public class JZ37 {
         }
         return cnt;
     }
+
+    // 二分法
+    public static int GetNumberOfK2(int[] array, int k) {
+        int low = 0;
+        int high = array.length - 1;
+        // 下界
+        while (low < high) {
+            int mid = (low + high) >> 1;
+            if (array[mid] < k) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        int lbound = low;
+        low = 0;
+        high = array.length - 1;
+        // 上界
+        while (low < high) {
+            int mid = (low + high) >> 1;
+            if (array[mid] <= k) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        int hbound = low;
+        return hbound - lbound;
+    }
+
 }

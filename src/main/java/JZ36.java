@@ -22,9 +22,6 @@ public class JZ36 {
         return null;
     }
 
-    // 暴力解法2
-
-
     // 双指针法
     public MyLinkedList.ListNode FindFirstCommonNode2(MyLinkedList.ListNode pHead1, MyLinkedList.ListNode pHead2) {
         MyLinkedList.ListNode pa = pHead1;

@@ -63,11 +63,7 @@ public class test {
 
     @Test
     public void test4() {
-        int[] a = {1, 2, 3, 4, 5,6};
-        int index = 0;
-        while (a[0] != a[index++]) {
-        }
-        System.out.println(index);
+        Integer a = 3;
     }
 
 
