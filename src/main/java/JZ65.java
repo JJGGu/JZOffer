@@ -36,6 +36,7 @@ public class JZ65 {
         if (col < cols - 1 && subHasPath(matrix, rows, cols, str, row, col + 1, len + 1)) {
             return true;
         }
+        // 说明条件不满足，置为未走过
         visited[row * cols + col] = false;
         return false;
     }

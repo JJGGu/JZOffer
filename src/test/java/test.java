@@ -63,8 +63,17 @@ public class test {
 
     @Test
     public void test4() {
-        Integer a = 3;
+        System.out.println(sum(3));
     }
-
-
+    private int sum(int n) {
+        if (n == 1) {
+            return n;
+        }
+        return sum(n - 1) + n;
+    }
+    
+    @Test
+    public void test5() {
+        System.out.println(2 ^ 2);
+    }
 }

@@ -11,7 +11,7 @@ public class JZ023 {
         if (sequence == null || sequence.length == 0) {
             return false;
         }
-        return judge(sequence, 0, sequence.length);
+        return judge(sequence, 0, sequence.length - 1);
 
     }
     // 递归判断左子树和右子树是否符合二叉搜索树的特点，即左子树比根节点小，右子树比根节点大
@@ -20,13 +20,13 @@ public class JZ023 {
             return true;
         }
         // 先根据后序数组找到分割点
-        int i = 0;
+        int i = start;
         while (a[i] < a[end]) {
             i++;
         }
         // 判读后面的值是否都大于a[i]
         int j = i;
-        while (j < end - 1) {
+        while (j < end) {
             if (a[j] < a[end]) {
                 return false;
             }

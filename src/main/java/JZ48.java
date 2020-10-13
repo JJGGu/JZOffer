@@ -20,4 +20,16 @@ public class JZ48 {
         return num1;
     }
 
+    public static int add2(int num1, int num2) {
+
+        while (num1 != 0) {
+            // 进位
+            int c = (num1 & num2) << 1;
+            // 无进位和
+            num2 = num1 ^ num2;
+            num1 = c;
+        }
+        return num2;
+    }
+
 }

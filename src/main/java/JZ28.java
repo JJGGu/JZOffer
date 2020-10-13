@@ -13,7 +13,7 @@ import java.util.Map;
 public class JZ28 {
     public static void main(String[] args) {
         int[] arr = {1,2,3,2,2,2,5,4,2};
-        int i = MoreThanHalfNum_Solution(arr);
+        int i = MoreThanHalfNum_Solution2(arr);
         System.out.println(i);
     }
 
@@ -34,4 +34,38 @@ public class JZ28 {
         }
         return 0;
     }
+
+    // 消除法
+    public static int MoreThanHalfNum_Solution2(int [] array) {
+        int count = 0;
+        int curValue = -1;
+
+        for (int i = 0; i < array.length; i++) {
+            if (count == 0) {
+                curValue = array[i];
+                count++;
+            } else {
+                if (curValue == array[i]) {
+                    count++;
+                } else {
+                    count--;
+                }
+            }
+        }
+
+        // 可能没有解，进行判断
+        count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (curValue == array[i]) {
+                count++;
+            }
+        }
+        if (count > array.length >> 1) {
+            return curValue;
+        }
+        else {
+            return 0;
+        }
+    }
+
 }

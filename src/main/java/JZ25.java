@@ -29,7 +29,7 @@ public class JZ25 {
 
         RandomListNode p = pHead;
         RandomListNode q = pHead;
-        Map<RandomListNode, RandomListNode> map = new HashMap<RandomListNode, RandomListNode>();
+        Map<RandomListNode, RandomListNode> map = new HashMap<>();
 
         while (p != null) {
             map.put(p, new RandomListNode(p.label));

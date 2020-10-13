@@ -17,7 +17,7 @@ public class JZ30 {
     public static int FindGreatestSumOfSubArray(int[] array) {
         // 记录当前最大子序列和
         int max = array[0];
-        // 记录到该点处的最大子序列
+        // 记录到该点处的可能最大子序列
         int[] dp = new int[array.length];
         dp[0] = array[0];
 

@@ -6,7 +6,7 @@
  **/
 public class JZ011 {
     public static void main(String[] args) {
-        System.out.println(NumberOf2(-6));
+        System.out.println(NumberOf1(-1));
     }
     // 对于负数还是有问题
     public static int NumberOf1(int n) {
